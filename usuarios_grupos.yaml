@@ -1,0 +1,19 @@
+---
+- name: trabajar con usuarios
+  hosts: all
+
+  tasks:
+    - name: Crear un usuario simple
+      user:
+        name: usu1
+
+    - name: Crear un grupo
+      group:
+        name: grupo1
+        state: present
+    - name: Crear un usuario en el grupo1
+      user:
+        name: usu2
+        group: grupo1
+        shell: bin/bash
+        home: /home/usuario1
