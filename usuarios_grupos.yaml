@@ -1,6 +1,7 @@
 ---
 - name: trabajar con usuarios
   hosts: all
+  become: true
 
   tasks:
     - name: Crear un usuario simple
